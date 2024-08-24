@@ -1,35 +1,28 @@
-# Program 6
-
-## Program Description:  
-- Write a program to print out the radius, diameter, area, and circumference of a circle.
-- The program should get the radius from the user
-  - Use double as your primative type for the radius  
-- Use a constant definition to store the value of  pi (3.14159).
-- Circumference = 2(pi)Radius or (pi)*Diameter
-- Area = (pi)*Radius<sup>2</sup>
-- Format the output to three decimal places.
-- Choose variable names which are meaningful for this problem.
-
-## Program Data:
-N/A
-
-## Statements Required: 
-- Scanner
-- System.out
-- Variable Assignment
-- Final Variable
-- Variable Operators (Math)
-
-## Sample Output:
->Enter the radius:
->
->3.712
->
->The Radius of the circle =			3.712
->
->The Diameter of the circle =    7.424
->
->The Area of the circle =			41.337
->
->The Circumference of the circle =		22.272
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner (System.in);
+    System.out.println("Enter radius: ");
+    double radius = myObj.nextDouble();
+    double diameter = radius * 2;
+    int diameter1 = (int)(diameter * 1000);
+    double diameter2 = (double)diameter1 / 1000; 
+    final double pi = 3.142;
+    double circumference = pi * diameter;
+    int circumference1 = (int)(circumference * 1000);
+    double circumference2 = (double)circumference1 / 1000;
+    double area = pi * radius * radius;
+    int area1 = (int)(area * 1000);
+    double area2 = (double)area1 / 1000;
+    System.out.println("The radius is: " + radius);
+    System.out.println("The diameter is: " + diameter2);
+    System.out.println("The circumference is: " +       circumference2); 
+    System.out.println("The area is: " + area2);
+  }
+}
+//Enter radius: 3.172 
+//The radius is: 3.172
+//The diameter is: 6.344 
+//The circumference is 19.932 
+//The area is 31.613
 
